@@ -1,0 +1,169 @@
+body {
+  background-color: #f6ddb8;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.site-title{
+width: 100%; /* 너비를 전체로 설정 */
+text-align: center; /* 가운데 정렬 */
+background-color: #442907; /* 배경색 */
+padding: 5px 0; /* 위아래 여백 추가 */
+margin-bottom: 10px; /* 영화 목록과의 간격 */
+}
+
+.site-title h1 {
+margin: 0; /* 여백 제거 */
+font-size: 50px; /* 제목 폰트 크기 */
+color: #ffffff; /* 글자색 */
+font-weight: bold;
+width: 100%; /* 너비를 전체로 설정 */
+text-align: left; 
+padding: 10px 0; 
+margin-bottom: 20px; 
+margin-left: 80px;
+
+}
+
+.app-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.movie-container {
+  position: relative; /* 순위 위치 기준을 컨테이너로 설정 */
+  width: 280px; /* 포스터와 컨테이너 너비 고정 */
+  height: 400px;
+  margin: 16px;
+  text-align: center; /* 텍스트와 포스터를 중앙 정렬 */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+  background-color: #fff; /* 배경 흰색 */
+  transition: transform 0.3s ease-in-out; /* hover 애니메이션 */
+}
+
+.movie-rank {
+  position: absolute; /* 부모 컨테이너 기준 위치 지정 */
+  top: 10px; /* 컨테이너 위쪽에서 10px */
+  left: 10px; /* 컨테이너 왼쪽에서 10px */
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+.movie-poster {
+  width: 100%; /* 부모 크기에 맞게 조정 */
+  border-radius: 10px; /* 포스터 모서리 둥글게 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* 그림자 */
+}
+.movie-container img {
+  max-width: 95%;
+}
+.movie-poster {
+  width: 250px; /* 포스터 이미지가 부모 너비에 맞춤 */
+  height: 330px; /* 고정된 높이로 설정 */
+  object-fit: cover; /* 이미지 비율 유지 */
+}
+
+.movie-details-poster {
+  position: relative;
+  width: 300px; /* 포스터 크기 */
+  border-radius: 10px;
+  overflow: hidden;
+}
+.movie-details .movie-poster {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+.movie-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+
+.movie-info span {
+  font-size: 14px;
+  color: #555;
+  font-weight: bold;
+}
+
+
+.movie-details {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.movie-info {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.movie-text {
+  max-width: 600px;
+}
+
+
+.movie-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movie-info {
+  display: flex;
+  text-align: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+
+.movie-text {
+  max-width: 600px;
+}
+
+.actors {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.actor {
+  text-align: center;
+  max-width: 100px;
+}
+
+.actor-photo {
+  border-radius: 50%;
+  max-width: 100%;
+}
+
+.movie-container h4 {
+  margin: 10px 0 5px; /* 위아래 여백 설정 */
+  font-size: 15px; /* 제목 글씨 크기 */
+  color: #333; /* 글자색 */
+  font-weight: bold; /* 굵게 표시 */
+}
+
+.movie-container span {
+  font-size: 15px; /* 별점 글씨 크기 */
+  color: #555; /* 색상 */
+  font-weight: normal;
+  display: block; /* 줄바꿈으로 별도 표시 */
+} 
