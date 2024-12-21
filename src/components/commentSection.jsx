@@ -1,9 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./commentSection.css";
 
 function CommentSection() {
-  const [comments, setComments] = useState([]); // 댓글 상태
-  const [inputValue, setInputValue] = useState(""); // 입력 필드 상태
+  const [comments, setComments] = useState(() => {
+    // 컴포넌트가 마운트될 때 로컬 스토리지에서 댓글을 불러옴
+    const savedComments = localStorage.getItem("comments");
+    return savedComments ? JSON.parse(savedComments) : [];
+  });
+  const [inputValue, setInputValue] = useState("");
+
+  // 댓글 상태가 변경될 때마다 로컬 스토리지에 저장
+  useEffect(() => {
+    localStorage.setItem("comments", JSON.stringify(comments));
+  }, [comments]);
 
   // 댓글 추가 핸들러
   const handleAddComment = () => {
