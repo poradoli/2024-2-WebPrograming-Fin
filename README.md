@@ -6,3 +6,4 @@ https://github.com/Boin-Kau/learn-react-with-simple-demo 에서 영화 템플릿
 -포스터 상단 각 순위 표시
 -포스터 클릭시 영화 포스터, 별점, 출연진 정보 받아옴
 -댓글 로컬스토리지에 저장.
+*/
